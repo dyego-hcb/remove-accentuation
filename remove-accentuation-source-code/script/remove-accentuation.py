@@ -6,11 +6,11 @@ def remove_accentuation(texto):
 def remove_accentuation_in_file(path_input, path_ouput):
     try:
         with open(path_input, 'r', encoding='utf-8') as input_file:
-            texto = arquivo_entrada.read()
+            texto = input_file.read()
 
         texto_sem_acentuacoes = remove_accentuation(texto)
 
-        with open(path_ouput, 'w', encoding='utf-8') as arquivo_saida:
+        with open(path_ouput, 'w', encoding='utf-8') as output_file:
             output_file.write(texto_sem_acentuacoes)
 
         print("Processamento concluído com sucesso.")
