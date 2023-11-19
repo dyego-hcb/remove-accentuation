@@ -1,16 +1,26 @@
 from unidecode import unidecode
 
-def remover_acentuacoes(texto):
+def remove_accentuation(texto):
     return unidecode(texto)
 
-nome_arquivo_entrada = './input/in.txt'
+def remove_accentuation_in_file(path_input, path_ouput):
+    try:
+        with open(path_input, 'r', encoding='utf-8') as input_file:
+            texto = arquivo_entrada.read()
 
-nome_arquivo_saida = './output/out.txt'
+        texto_sem_acentuacoes = remove_accentuation(texto)
 
-with open(nome_arquivo_entrada, 'r', encoding='utf-8') as arquivo_entrada:
-    texto = arquivo_entrada.read()
+        with open(path_ouput, 'w', encoding='utf-8') as arquivo_saida:
+            output_file.write(texto_sem_acentuacoes)
 
-texto_sem_acentuacoes = remover_acentuacoes(texto)
+        print("Processamento concluído com sucesso.")
 
-with open(nome_arquivo_saida, 'w', encoding='utf-8') as arquivo_saida:
-    arquivo_saida.write(texto_sem_acentuacoes)
+    except FileNotFoundError:
+        print(f"Arquivo {path_input} não encontrado.")
+    except Exception as e:
+        print(f"Ocorreu um erro: {e}")
+
+path_input = './input/in.txt'
+path_ouput = './output/out.txt'
+
+remove_accentuation_in_file(path_input, path_ouput)
