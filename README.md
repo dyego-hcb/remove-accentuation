@@ -1,3 +1,44 @@
+# Remoção de Acentuação
+
+Este é um utilitário simples em Python que permite a remoção de acentos de texto em arquivos. Ele utiliza a biblioteca `unidecode` para realizar essa tarefa de forma eficiente.
+
+### Estrutura de Pastas
+
+- A pasta **[Código Fonte de Remoção de Acentuação](./remove-accentuation-source-code/)** contém as entradas e saídas utilizadas no projeto criado, bem como o próprio código fonte.
+- Na pasta **[Script](./remove-accentuation-source-code/script/)**, você encontrará o código fonte do projeto.
+
+## Como Funciona
+
+O utilitário lê um arquivo de texto de entrada e remove todos os acentos, convertendo caracteres acentuados para suas equivalentes sem acentos. O resultado é escrito em um novo arquivo de saída.
+
+## Como Usar
+
+Siga estes passos para remover acentos de um arquivo de texto:
+
+1. Clone este repositório ou baixe o código fonte para o seu ambiente local.
+
+2. Certifique-se de ter a biblioteca `unidecode` instalada. Se não tiver, instale-a com o seguinte comando:
+
+pip install unidecode
+
+3. Coloque o arquivo de texto que deseja processar na pasta input.
+
+4. Execute o utilitário fornecido (`remove_accentuation.py`). Certifique-se de definir o nome do arquivo de entrada (`nome_arquivo_entrada`) e o nome do arquivo de saída (`nome_arquivo_saida`) no código, se necessário.
+
+5. Após a execução, o arquivo de saída conterá texto sem acentos na pasta `output`.
+
+### Por que Remover Acentos?
+
+A remoção de acentos pode ser útil em diversas situações, tais como:
+
+- Preparação de texto para processamento de linguagem natural.
+- Padronização de texto em sistemas que não suportam caracteres acentuados.
+- Simplificação de consultas em bancos de dados.
+
+Este utilitário é uma solução simples para remover acentos de forma eficaz e pode ser facilmente incorporado em outros projetos.
+
+***
+
 # Accentuation Removal
 
 This is a simple Python utility that allows you to remove accents from text in files. It uses the `unidecode` library to efficiently perform this task.
@@ -20,7 +61,6 @@ Follow these steps to remove accents from a text file:
 2. Make sure you have the `unidecode` library installed. If not, install it with the following command:
 
 pip install unidecode
-
 
 3. Place the text file you want to process in the `input` folder.
 
